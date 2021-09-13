@@ -1,4 +1,4 @@
-export interface ISaveReqBuss{
+export interface ISaveReqBuss {
   BusName: string ,
   BussSeats:string , 
   StartDate: string ;

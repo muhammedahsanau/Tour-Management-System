@@ -21,7 +21,4 @@ export class MainRouter {
 export const MainApi = new MainRouter().router;
 
 
-//// this.router.use('/products',ProductRoutesApi);
-//// this.router.use('/orders',OrderRoutesApi);
-// this.router.use('/Items',ItemRoutesApi);
-// this.router.use('/orders',OrderRoutesApi);
+ 
