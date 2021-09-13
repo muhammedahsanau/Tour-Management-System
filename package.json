@@ -1,7 +1,7 @@
 {
-  "name": "hotel-management-system",
+  "name": "Tour-management-system",
   "version": "1.0.0",
-  "description": "Hotel Management System by - Muhammad Ahsan",
+  "description": "Tour Management System by - Muhammad Ahsan",
   "main": "index.js",
   "scripts": {
     "start": "node build/index.js",

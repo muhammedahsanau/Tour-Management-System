@@ -1,8 +1,7 @@
 import express from 'express';
-import { ItemRoutesApi } from "./Item.Routes";
-import { OrderRoutesApi } from "./Order.Routes";
-import { WaiterRoutesApi } from "./Waiter.Routes";
-import { AdminRoutesApi } from "./Admin.Routes";
+import { BussRoutesApi } from "./Buss.routes";
+
+ 
 
 export class MainRouter {
     router: express.Router;
@@ -11,11 +10,9 @@ export class MainRouter {
         this.routes();
     }
     routes() {
-  
-      this.router.use('/orders',OrderRoutesApi)
-      this.router.use('/admin',AdminRoutesApi)
-      this.router.use('/waiter',WaiterRoutesApi);
-      this.router.use('/Items',ItemRoutesApi);
+
+    
+      this.router.use('/Buss',BussRoutesApi);
     }
 
 
