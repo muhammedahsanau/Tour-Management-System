@@ -5,8 +5,8 @@ export class MainTour {
  
   saveTour(buss: ITOUR,seatsArray:string[]) {
  
-       buss.Busses = seatsArray
-    return new TOURSchema(buss).save();
+    buss.Busses = seatsArray
+    return  new TOURSchema(buss).save();
   }
   
 

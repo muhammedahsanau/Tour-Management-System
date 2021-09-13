@@ -49,7 +49,7 @@ export class TourController {
        }    
    }
     const newTour:any = await new MainTour().saveTour(<ITOUR>(tour),<string[]>idsOfBusses);
-    return <ISaveUpdateResTour>(newTour);
+    return <ISaveUpdateResTour>(newTour.populate("Busses"));
 
   // This function is used to get the array og the busses .
   function getBusses(array: any, sum: any) {
