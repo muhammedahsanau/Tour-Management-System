@@ -1,14 +1,7 @@
 import express from "express";
 import { TourController } from "../controller/Tour.controller";
 import { ITOUR } from "../types/document/ITOUR";
-// const  UserAuth  =require("../middlewares/WaiterAuth") ;
-// const  AdminAuth  =require("../middlewares/AdminAuth") ;
-import {
- 
-  ISaveReqTour,
-   
-} from "../types/Request/Tour.request";
-
+import {ISaveReqTour} from "../types/Request/Tour.request";
 import {ISaveUpdateResTour} from "../types/Response/Tour.response"
 const checkAvailableBusses = require("../middlewares/Check.available.busses");
 
