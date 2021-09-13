@@ -7,7 +7,7 @@ import {
   IDeleteBuss,
   ISaveReqBuss,
   IUpdateReqBuss,
-} from "../types/Request/buss.Request";
+} from "../types/Request/Buss.request";
 
 import {ISaveUpdateResBuss} from "../types/Response/Buss.response"
  
