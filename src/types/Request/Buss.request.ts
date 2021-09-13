@@ -7,7 +7,8 @@ export interface ISaveReqBuss{
     _id: string;
     BusName: string ,
     BussSeats:string , 
-    BussBokingDates:  string ,
+    StartDate: string ;
+    EndDate: string ,
   }
   
   

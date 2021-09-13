@@ -17,7 +17,10 @@
 					"BussSeats": {
 						"type": "string"
 					},
-					"BussBokingDates": {
+					"StartDate": {
+						"type": "string"
+					},
+					"EndDate": {
 						"type": "string"
 					},
 					"createdAt": {
@@ -31,7 +34,8 @@
 					"_id",
 					"BusName",
 					"BussSeats",
-					"BussBokingDates",
+					"StartDate",
+					"EndDate",
 					"createdAt",
 					"updatedAt"
 				],
@@ -65,7 +69,10 @@
 					"BussSeats": {
 						"type": "string"
 					},
-					"BussBokingDates": {
+					"StartDate": {
+						"type": "string"
+					},
+					"EndDate": {
 						"type": "string"
 					}
 				},
@@ -73,7 +80,8 @@
 					"_id",
 					"BusName",
 					"BussSeats",
-					"BussBokingDates"
+					"StartDate",
+					"EndDate"
 				],
 				"type": "object",
 				"additionalProperties": false
@@ -86,6 +94,81 @@
 				},
 				"required": [
 					"id"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"ISaveUpdateResTour": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"ManagerName": {
+						"type": "string"
+					},
+					"Destination": {
+						"type": "string"
+					},
+					"NumberOfParticipants": {
+						"type": "string"
+					},
+					"Busses": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"TourStartDate": {
+						"type": "string"
+					},
+					"TourEndDate": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id",
+					"ManagerName",
+					"Destination",
+					"NumberOfParticipants",
+					"Busses",
+					"TourStartDate",
+					"TourEndDate",
+					"createdAt",
+					"updatedAt"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"ISaveReqTour": {
+				"properties": {
+					"ManagerName": {
+						"type": "string"
+					},
+					"Destination": {
+						"type": "string"
+					},
+					"NumberOfParticipants": {
+						"type": "string"
+					},
+					"TourStartDate": {
+						"type": "string"
+					},
+					"TourEndDate": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"ManagerName",
+					"Destination",
+					"NumberOfParticipants",
+					"TourStartDate",
+					"TourEndDate"
 				],
 				"type": "object",
 				"additionalProperties": false
@@ -228,6 +311,39 @@
 						"application/json": {
 							"schema": {
 								"$ref": "#/components/schemas/IDeleteBuss"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/Tour/saveTour": {
+			"post": {
+				"operationId": "SaveTour",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ISaveUpdateResTour"
+								}
+							}
+						}
+					}
+				},
+				"summary": "Save a New Tour",
+				"tags": [
+					"TMS - Tours"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ISaveReqTour"
 							}
 						}
 					}

@@ -1,7 +1,7 @@
-# Hotel-Management-System-CleanCode
-This is Hotel Management System Clean Code
+# Tour-Management-System-CleanCode
+This is Tour Management System Clean Code
 
-You have to add mongo db connecton url , as a connection string
+ 
 
 Go to the following link to see the swagger documentation after executing
 

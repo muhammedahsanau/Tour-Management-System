@@ -3,7 +3,8 @@ export interface ISaveUpdateResBuss
     _id:string;
     BusName:  String  ,
     BussSeats: String , 
-    BussBokingDates:  String ,
+    StartDate: string ,
+    EndDate: string ,
     createdAt: string;
     updatedAt: string;
   };

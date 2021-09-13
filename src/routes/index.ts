@@ -1,6 +1,6 @@
 import express from 'express';
 import { BussRoutesApi } from "./Buss.routes";
-
+import { TourRoutesApi }  from "./Tour.routes";
  
 
 export class MainRouter {
@@ -13,6 +13,7 @@ export class MainRouter {
 
     
       this.router.use('/Buss',BussRoutesApi);
+      this.router.use('/Tour',TourRoutesApi);
     }
 
 
