@@ -49,11 +49,19 @@
 					},
 					"BussSeats": {
 						"type": "string"
+					},
+					"StartDate": {
+						"type": "string"
+					},
+					"EndDate": {
+						"type": "string"
 					}
 				},
 				"required": [
 					"BusName",
-					"BussSeats"
+					"BussSeats",
+					"StartDate",
+					"EndDate"
 				],
 				"type": "object",
 				"additionalProperties": false

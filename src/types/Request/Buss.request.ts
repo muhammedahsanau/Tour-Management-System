@@ -1,7 +1,8 @@
 export interface ISaveReqBuss{
   BusName: string ,
   BussSeats:string , 
- 
+  StartDate: string ;
+  EndDate: string ,
   }
   export interface IUpdateReqBuss {
     _id: string;
