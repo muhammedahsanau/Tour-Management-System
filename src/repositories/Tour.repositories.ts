@@ -4,8 +4,7 @@ export class MainTour {
   constructor() {}
  
   saveTour(buss: ITOUR,seatsArray:string[]) {
-    // todo
-    //  var l: number = +seatsArray;
+ 
        buss.Busses = seatsArray
     return new TOURSchema(buss).save();
   }

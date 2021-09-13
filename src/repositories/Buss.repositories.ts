@@ -17,8 +17,6 @@ export class MainBuss {
   getBusseslist() {
    return BUSSSchema.find();
   }
- 
 
-
- 
+  
 }
