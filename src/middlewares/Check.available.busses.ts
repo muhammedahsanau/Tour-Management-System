@@ -1,5 +1,5 @@
 import { ISaveReqTour } from "../types/Request/Tour.request";
-import { ISaveUpdateResBuss } from "../types/Response/Buss.responce";
+import { ISaveUpdateResBuss } from "../types/Response/Buss.response";
 import { BussController } from "../controller/Buss.controller";
 module.exports = async function (req: any, res: any, next: any) {
 

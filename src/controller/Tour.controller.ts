@@ -1,11 +1,11 @@
 
-import { ISaveUpdateResBuss } from "../types/Response/Buss.responce";
+import { ISaveUpdateResBuss } from "../types/Response/Buss.response";
 import { BussController } from "../controller/Buss.controller";
 import { ITOUR } from '../types/document/ITOUR';
 import { MainTour } from '../repositories/Tour.repositories';
 import CustomeError from '../utills/error';
 import { Get, Route, Tags, Post, Body, Path, Put, Delete, SuccessResponse,Security } from "tsoa";
-import { ISaveUpdateResTour } from '../types/Response/Tour.responce'; 
+import { ISaveUpdateResTour } from '../types/Response/Tour.response'; 
 import {  ISaveReqTour } from '../types/Request/Tour.request';
 
 

@@ -2,7 +2,7 @@ import { IBUSS } from '../types/document/IBUSS';
 import { MainBuss } from '../repositories/Buss.repositories';
 import CustomeError from '../utills/error';
 import { Get, Route, Tags, Post, Body, Path, Put, Delete, SuccessResponse,Security } from "tsoa";
-import { ISaveUpdateResBuss } from '../types/Response/Buss.responce'; 
+import { ISaveUpdateResBuss } from '../types/Response/Buss.response'; 
 import { IDeleteBuss, ISaveReqBuss, IUpdateReqBuss} from '../types/Request/Buss.request';
 @Route('Buss')
 @Tags('TMS - Busses')

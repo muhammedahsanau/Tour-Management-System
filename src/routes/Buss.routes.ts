@@ -9,7 +9,7 @@ import {
   IUpdateReqBuss,
 } from "../types/Request/buss.Request";
 
-import {ISaveUpdateResBuss} from "../types/Response/Buss.responce"
+import {ISaveUpdateResBuss} from "../types/Response/Buss.response"
  
 
 

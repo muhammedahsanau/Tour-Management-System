@@ -9,7 +9,7 @@ import {
    
 } from "../types/Request/Tour.request";
 
-import {ISaveUpdateResTour} from "../types/Response/Tour.responce"
+import {ISaveUpdateResTour} from "../types/Response/Tour.response"
 const checkAvailableBusses = require("../middlewares/Check.available.busses");
 
 
