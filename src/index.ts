@@ -5,7 +5,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import mongoose from "mongoose";
 import {MainApi} from "./routes";
-import { DbMongo } from "../src/config/mongodb.conn";
+import { DbMongo } from "./config/mongodb.conn";
 import { Server } from "http";
 const health = require('@cloudnative/health-connect');
 let healthcheck = new health.HealthChecker();
