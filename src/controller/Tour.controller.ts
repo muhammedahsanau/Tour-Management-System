@@ -20,36 +20,39 @@ export class TourController {
 
     const bussList: ISaveUpdateResBuss[] =
     await new BussController().getBussList();
-    var seats = [];
+    var seatsFromSavedBusses = [];
     for (let index = 0; index < bussList.length; index++) {
       const element = bussList[index].BussSeats;
       var x = element;
       var y: number = +x;
-      seats.push(y);
+      seatsFromSavedBusses.push(y);
     }
     // console.log(tour.NumberOfParticipants);
     var x: String = tour.NumberOfParticipants;
     //converting string to array
     var l: number = +x;
-    let result:any = getBusses(seats,l)[0]
-    console.log(result);
+    let SeatsArray:any = getBusses(seatsFromSavedBusses,l)[0]
+    
+    console.log(getBusses(seatsFromSavedBusses,l));
+    console.log(SeatsArray);
     const idsOfBusses = []
 
-   for (let index = 0; index < bussList.length; index++) {
+   for (let bussindex = 0; bussindex < bussList.length; bussindex++) {
       
-       var x = bussList[index].BussSeats
-       var bussSeat: number = +x;
-
-       for (let index = 0; index < result.length; index++) {
-         const element = result[index];
-         if (bussSeat==element) {
+       var x = bussList[bussindex].BussSeats
+       
+       var noOfbussSeat: number = +x;
+       for (let index = 0; index < SeatsArray.length; index++) {
+         const noOfSeatWeNeed = SeatsArray[index];
+         if (noOfbussSeat==noOfSeatWeNeed) {
           idsOfBusses.push(bussList[index]._id)
-          bussList[index].BussSeats = "0"
+            SeatsArray[index] = "null"
+          // bussList[bussindex].BussSeats = "null"
         }  
        }    
    }
     const newTour:any = await new MainTour().saveTour(<ITOUR>(tour),<string[]>idsOfBusses);
-    return <ISaveUpdateResTour>(newTour.populate("Busses"));
+    return <ISaveUpdateResTour>(newTour.populate("Busses","-createdAt -updatedAt"));
 
   // This function is used to get the array og the busses .
   function getBusses(array: any, sum: any) {

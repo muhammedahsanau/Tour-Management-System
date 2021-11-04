@@ -21,19 +21,19 @@ module.exports = async function (req: any, res: any, next: any) {
 
   try {
     const tour: ISaveReqTour = req.body;
-    console.log(tour.NumberOfParticipants);
+    // console.log(tour.NumberOfParticipants);
     var x: String = tour.NumberOfParticipants;
     //converting string to array
     var y: number = +x;
-    console.log("seats" + seats);
-    console.log("seats" + y);
+    // console.log("seats" + seats);
+    console.log("getBusses(seats, y).length" + getBusses(seats, y).length);
     if(getBusses(seats, y).length > 0) {
      next()
     }
     else{
   
       res.status(404);
-      res.send('Sorry, There is no buss available');
+      res.send('Sorry, There is no buss available or the Number Of Participants are greater then our busses capacity');
     }
 
   } catch (error) {
